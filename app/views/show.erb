@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Blog Display Page</title>
+  </head>
+  <body>
+ 
+ <center><h1> Individual Blog Post </h1></center>
+
+  <h2>Blog Name: <%=@post.name%> </h2>
+    <p><%=@post.content%> </p>
+
+    <form method="post" action="/posts/<%= @post.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
+
+     <center><a href="/posts">Click here to go back to home page.</a></center
+
+  </body>
+</html>
